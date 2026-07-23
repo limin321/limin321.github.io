@@ -1,0 +1,35 @@
+name: Deploy Quarto Site
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install Python and Dependencies
+        uses: actions/setup-python@v5
+        with:
+          python-type: 'miniconda'
+
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: html
+
+      - name: Commit and Push Compiled Site Docs
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@://github.com"
+          git add docs/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Automated site compile" && git push origin master)
+
