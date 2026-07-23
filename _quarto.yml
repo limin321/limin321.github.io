@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+  execute:
+    freeze: true #ensures code is shown but Never run on Github
+
+website:
+  title: "Bioinfomatics Analysis Hub"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Single-Cell RNA seq"
+        contents:
+          - text: "standard single-cell data analysis workflow"
+            file: single_cell/regular_sc.ipynb
+
+      - section: "Spatial_Transcriptomics Data Analysis"
+        contents:
+          - text: "10X Vsium spatial data"
+            file: spatial_transcriptomics/visium_sp.ipynb
+
+format:
+  html:
+    theme: cosmo
+    toc: true
