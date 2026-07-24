@@ -12,15 +12,15 @@ website:
     style: "docked"
     search: true
     contents:
-      - section: "Single-Cell RNA seq"
+      - section: "Single-Cell RNAseq"
         contents:
-          - text: "standard single-cell data analysis workflow"
-            file: single_cell/regular_sc.ipynb
+          - text: "single-cell workflow"
+            file: single_cell/gpu_scanpy.ipynb
 
-      - section: "Spatial_Transcriptomics Data Analysis"
+      - section: "Spatial_Transcriptomics"
         contents:
-          - text: "10X Vsium spatial data"
-            file: spatial_transcriptomics/visium_sp.ipynb
+          - text: "10X Atera"
+            file: spatial_transcriptomics/Atera.ipynb
 
 format:
   html:
