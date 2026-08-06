@@ -16,12 +16,25 @@ website:
         contents:
           - text: "single-cell workflow"
             file: single_cell/gpu_scanpy.ipynb
+          - text: "Standard Single-Cell Workflow"
+            file: single_cell/single-cell.ipynb
+          - text: "Perturb-seq Analysis"
+            file: single_cell/perturb-seq.ipynb
 
       - section: "Spatial_Transcriptomics"
         contents:
           - text: "10X Atera"
             file: spatial_transcriptomics/Atera.ipynb
+          - text: "Xenium Image-based"
+            file: spatial_transcriptomics/Xenium/xenium.ipynb
+          - text: "CosMx"
+            file: spatial_transcriptomics/CosMx/nanostring_CosMx.ipynb
 
+      - section: "Proteomics"
+        contents:
+          - text: "Lunaphore_comet Image-based"
+            file: proteomics/lunaphore_comet.ipynb
+            
 format:
   html:
     theme: cosmo
