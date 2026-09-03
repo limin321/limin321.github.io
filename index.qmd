@@ -1,0 +1,45 @@
+---
+title: "About Me"
+---
+
+# Welcome to My Bioinformatics Portfolio
+
+I am an **Computational Scientist/Bioinformatician** with over 6 years of experience developing AI-enabled scientific workflows, bioinformatics software, data pipelines, and scalable computational solutions for genomics and multimodal biological data. 
+
+Holding a **Ph.D. in Computational Genomics**, my expertise spans molecular biology, cancer biology, and translating complex scientific requirements into production-ready, reusable software capabilities.
+
+---
+
+## Core Expertise & Technical Focus
+
+### 🧬 Single-Cell & Spatial Analysis
+* **Pipeline Leadership:** Lead the development of Python-based computational workflows for single-cell RNA-seq, spatial transcriptomics, Perturb-seq, and multiplexed imaging datasets.
+* **Method Development:** Developed **STmut-hires**, a modular spatial-genomics workflow, alongside specialized Dockerized solutions (like `addImg2AnnData`) integrated directly into commercial production pipelines.
+* **Advanced Analytics:** Experienced in 24-plex multiplex immunofluorescence analysis, cell segmentation, and spatial cell identification.
+* **High-Impact Research:** Primary author of spatial transcriptomics methods published in peer-reviewed journals like *Genome Biology*.
+
+### 📊 Genomics Analysis
+* **Translational Cancer Genomics:** Developed comprehensive workflows for whole-genome (WGS), whole-exome (WES), and targeted sequencing data (UCSF500) across diverse sequencing platforms.
+* **Variant & Mutation Workflows:** Engineered robust frameworks for quality control, variant calling (including DeepVariant), and functional annotation utilizing large-scale files (FASTQ, BAM, VCF, GTF).
+* **Proven Scientific Output:** Co-authored genomic discovery papers in elite journals including *Cell*, *Nature Cell Biology*, and *Science Advances*.
+
+### 💻 Software & Pipeline Development and Maintenance
+* **Reproducible Engineering:** 6+ years building automated, configuration-driven data pipelines using Python, Bash, Nextflow, and Linux across AWS cloud and HPC/Slurm environments.
+* **Production-Grade Quality:** Expert in modern software best practices including version control (Git/GitHub), containerization (Docker, Singularity), and automated CI/CD testing.
+* **Rigorous Validation:** Design and execute end-to-end testing strategies—including unit, integration, regression, and performance testing—to ensure absolute workflow reproducibility and reliability.
+
+### 🤝 Collaboration with Other Teams & Scientists
+* **Cross-Functional Bridge:** Regularly collaborate across R&D, application scientists, software engineers, and product managers to translate complex scientific needs into concrete product capabilities.
+* **Customer-Facing Support:** Successfully supported 50+ external projects, directly troubleshooting data workflows, evaluating software performance, and gathering feedback to drive software iteration.
+* **Multidisciplinary Alignment:** Experienced in partnering directly with clinicians and experimental biologists to translate raw biological hypotheses into robust, objective computational solutions.
+
+### 🤖 Scientific AI & Generative AI
+* **Agentic Workflows:** Design and optimize LLM- and agentic-AI workflows specifically built for automated biological interpretation, literature-guided evidence synthesis, and cell-type annotation.
+* **AI-Genomic Integration:** Built a custom agentic AI application that integrates LLM reasoning capacities directly with active spatial transcriptomics pipelines.
+* **Rigorous AI Evaluation:** Established benchmarking frameworks to systematically evaluate and verify the scientific accuracy, reproducibility, and trustworthiness of AI-generated biological insights.
+
+---
+
+## Contact & Links
+* **Email:** Lynnchen31@gmail.com
+* **Profiles:** [GitHub](https://github.com/limin321) | [LinkedIn](https://www.linkedin.com/in/limin-chen-344141133/) | [Docker Hub](https://hub.docker.com/u/limin321) | [Professional Profile](https://limin321.github.io/)

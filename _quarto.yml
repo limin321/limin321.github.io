@@ -7,12 +7,17 @@ execute:
 
 
 website:
-  title: "Bioinfomatics Analysis Hub"
+  title: "Bioinformatics Analysis Hub"
   sidebar:
     style: "docked"
     search: true
     contents:
-      - section: "Single-Cell"
+      # --- Homepage ---
+      - text: "About Me"
+        file: index.qmd
+
+      # -- Analysis Section ---
+      - section: "Single Cell Analysis"
         contents:
           - section: "single_cell"
             contents:
@@ -25,7 +30,7 @@ website:
               - text: "Perturb-seq"
                 file: single_cell/perturb-seq.ipynb
 
-      - section: "Spatial_Transcriptomics"
+      - section: "Spatial Transcriptomics"
         contents:
           - section: "10X Atera"
             contents: 

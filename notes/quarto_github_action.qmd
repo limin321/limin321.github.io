@@ -17,6 +17,10 @@ Include all files and folders in this repo reqired to build the webpage.
 # Step 2. Set Up the `_quarto.yml` Configuration File in the GitHub repo
 Create a file named `_quarto.yml` in the root directory of your project. This file manages your site's structure, navigation, and theme.
 
+
+The section name and text name Can't be the same. Otherwise, it will fail to load the page causing 404 error. 
+For example, 'section: "Notes"', 'text: "Notes"'. This double the path in URL 'x/Notes/Notes/', causing loading failure.
+
 ```yaml
 website:
   title: "Bioinfomatics Analysis Hub"
