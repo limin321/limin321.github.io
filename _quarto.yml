@@ -52,7 +52,7 @@ website:
       - section: "Notes"
         contents:
           - text: "Quarto_GitHub_Action"
-            file: Notes/Notes/quarto_github_action.txt
+            file: notes/quarto_github_action.qmd
             
 format:
   html:
