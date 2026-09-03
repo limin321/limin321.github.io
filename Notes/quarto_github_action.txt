@@ -1,0 +1,99 @@
+# Setup Guide: Deploying a Quarto Personal Profile Website via GitHub Actions
+
+This guide outlines how to configure a Quarto personal website and set up an automated GitHub Actions workflow to render and deploy it directly to GitHub Pages.
+
+---
+
+## 1. Set Up the `_quarto.yml` Configuration File
+
+Create a file named `_quarto.yml` in the root directory of your project. This file manages your site's structure, navigation, and theme.
+
+```yaml
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "My Personal Profile"
+  description: "Personal website, portfolio, and resume built with Quarto"
+  
+  # Navigation Bar Configuration
+  navbar:
+    background: primary
+    search: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: resume.qmd
+        text: Resume
+      - href: projects.qmd
+        text: Projects
+    right:
+      - icon: github
+        href: https://github.com/YOUR_USERNAME
+      - icon: linkedin
+        href: https://www.linkedin.com/in/YOUR_USERNAME
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+```
+
+---
+
+## 2. Add the GitHub Action Workflow (`.github/workflows/deploy.yml`)
+
+Create a directory path named `.github/workflows/` in your repository and save the following configuration as `deploy.yml`. This workflow automates building the site on every change pushed to the `main` branch.
+
+```yaml
+name: Deploy Quarto Profile Website
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      # Optional: Uncomment if your Quarto project relies on R or Python code execution
+      # - name: Set up Python
+      #   uses: actions/setup-python@v5
+      #   with:
+      #     python-version: '3.10'
+      # - name: Install Python Dependencies
+      #   run: pip install -r requirements.txt
+
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+```
+
+---
+
+## 3. Crucial GitHub Repository Settings
+
+To ensure the automated action completes and goes live successfully, verify these two configurations on GitHub:
+
+1. **Workflow Permissions:** Go to `Settings` -> `Actions` -> `General`. Scroll down to "Workflow permissions" and select **"Read and write permissions"**, then save.
+2. **GitHub Pages Source:** Go to `Settings` -> `Pages`. Under "Build and deployment", ensure the Source is set to **"Deploy from a branch"**. After the action runs for the first time, change the targeted deployment branch to **`gh-pages`** (created automatically by the workflow) and the directory path to **`/ (root)`**.

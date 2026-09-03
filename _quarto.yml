@@ -12,28 +12,47 @@ website:
     style: "docked"
     search: true
     contents:
-      - section: "Single-Cell RNAseq"
+      - section: "Single-Cell"
         contents:
-          - text: "single-cell workflow"
-            file: single_cell/gpu_scanpy.ipynb
-          - text: "Standard Single-Cell Workflow"
-            file: single_cell/single-cell.ipynb
-          - text: "Perturb-seq Analysis"
-            file: single_cell/perturb-seq.ipynb
+          - section: "single_cell"
+            contents:
+              - text: "scanpy_gpu_version"
+                file: single_cell/gpu_scanpy.ipynb
+              - text: "Standard_Single-Cell_Workflow"
+                file: single_cell/single-cell.ipynb
+              - text: "NSCLU-LUSC_Patient19_single_cell"
+                file: single_cell/NSCLU-LUSC_Patient19_single_cell.ipynb
+              - text: "Perturb-seq"
+                file: single_cell/perturb-seq.ipynb
 
       - section: "Spatial_Transcriptomics"
         contents:
-          - text: "10X Atera"
-            file: spatial_transcriptomics/Atera.ipynb
-          - text: "Xenium Image-based"
-            file: spatial_transcriptomics/Xenium/xenium.ipynb
-          - text: "CosMx"
-            file: spatial_transcriptomics/CosMx/nanostring_CosMx.ipynb
+          - section: "10X Atera"
+            contents: 
+              - text: "Atera"
+                file: spatial_transcriptomics/Atera.ipynb
+          - section: "Xenium Image-based"
+            contents:
+              - text: "xenium"
+                file: spatial_transcriptomics/Xenium/xenium.ipynb
+          - section: "CosMx"
+            contents:
+              - text: "nanostring_CosMx"
+                file: spatial_transcriptomics/CosMx/nanostring_CosMx.ipynb
+          - section: "Visium"
+            contents:
+              - text: "NSCLU-LUSC_Patient19_tumor"
+                file: spatial_transcriptomics/Visium/NSCLU-LUSC_Patient19_tumor.ipynb
 
       - section: "Proteomics"
         contents:
           - text: "Lunaphore_comet Image-based"
             file: proteomics/lunaphore_comet.ipynb
+
+      - section: "Notes"
+        contents:
+          - text: "Quarto_GitHub_Action"
+            file: Notes/Notes/quarto_github_action.txt
             
 format:
   html:
